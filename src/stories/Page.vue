@@ -58,31 +58,54 @@
   </article>
 </template>
 
-<script>
+<script setup lang="ts">
 import './page.css';
 import MyHeader from './Header.vue';
+import { ref } from 'vue';
 
-export default {
-  name: 'my-page',
 
-  components: { MyHeader },
 
-  data() {
-    return {
-      user: null
-    }
-  },
 
-  methods: {
-    onLogin() {
-      this.user = { name: 'Jane Doe' };
-    },
-    onLogout() {
-      this.user = null;
-    },
-    onCreateAccount() {
-      this.user = { name: 'Jane Doe' };
-    },
-  },
-};
+const user = ref();
+
+function onLogin(){
+
+  user.value = {name:'John Doe'}
+
+}
+
+function onLogout(){
+
+  user.value=null
+
+}
+
+function onCreateAccount(){
+
+  user.value = {name:'John Doe'}
+
+}
+// export default {
+//   name: 'my-page',
+
+//   components: { MyHeader },
+
+//   data() {
+//     return {
+//       user: null
+//     }
+//   },
+
+//   methods: {
+//     onLogin() {
+//       this.user = { name: 'Jane Doe' };
+//     },
+//     onLogout() {
+//       this.user = null;
+//     },
+//     onCreateAccount() {
+//       this.user = { name: 'Jane Doe' };
+//     },
+//   },
+// };
 </script>

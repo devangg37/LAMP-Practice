@@ -50,3 +50,9 @@ Small.args = {
   size: 'small',
   label: 'Button',
 };
+
+export const Big = Template.bind({});
+Big.args = {
+  size: 'small',
+  label:'Big'
+}
