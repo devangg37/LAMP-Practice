@@ -1,21 +1,17 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import Checkbox from "./components/CheckBox.vue";
+import { defineComponent, ref } from "vue";
+const checkboxvar = ref(false);
+const checkbox = defineComponent(Checkbox);
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <checkbox fieldId=”testcheckbox” v-model:checked="checkboxvar" checkheight="h-[23px]" checkwidth="w-[23px]" labelsize="text-[23px]" label="選択肢"></checkbox>
+  <div v-if="checkboxvar">The checkbox is selected</div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
