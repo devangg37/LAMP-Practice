@@ -17,5 +17,6 @@ const Template : StoryFn<typeof DropDown>  = (args)=>({
 
 export const First = Template.bind({});
 First.args = {
+    options : ['1x','2x'],
     font: {width:"w-[200px]", height:"h-[50px]", top:"top-[50px]",}
 };
