@@ -6,6 +6,6 @@ import RadioButton from './components/RadioButton.vue';
 </script>
 
 <template>
-  <RadioButton />
+  <RadioButton w="w-[200px]" />
 </template>
 

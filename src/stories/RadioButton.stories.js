@@ -17,8 +17,5 @@ const Template  = (args)=>({
 
 export const First = Template.bind({});
 First.args = {
-    width:"w-[200px]",
-    height:"h-[50px]",
-    label:"Click"
-    
+    width:"200",
 }
