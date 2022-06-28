@@ -48,17 +48,17 @@
     import { ref, toRef } from 'vue';
 
     const props = defineProps({
-        options :{
-          type: Array<String>,
-          required: true
-        },
+        // options :{
+        //   type: Array<String>,
+        //   required: true
+        // },
          font: {
           type: Object,
           default: { width: "w-[242px]" ,  height: "h-[46px]", top: "top-[46px]" }
         }
     })
-
-    const selectedOption = ref(props.options[0])
+    const options : Array<String> = ['1x','2x','3x']
+    const selectedOption = ref(options[0])
     const isOptionsExpanded = ref(false)
 
     function setOption(option:String){
