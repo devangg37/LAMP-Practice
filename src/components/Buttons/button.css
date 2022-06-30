@@ -1,0 +1,63 @@
+.storybook-button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+.storybook-button--primary {
+  color: white;
+  background-color: #1ea7fd;
+}
+.storybook-button--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+.storybook-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+.buttonnormal{
+  width: 308px;
+  height: 54px;
+  background-color: #FFFFFF;
+  border: solid 1px #888888;
+  border-width: 1px 1px 3px 1px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.buttonnormal i{
+  /* position: absolute;
+  left: 19.22%;
+  right: 76.61%;
+  top: 53.29%;
+  bottom: 46.51%; */
+
+  background: #CCCCCC;
+  transform: rotate(-90deg);
+}
+
+.buttonnormal-red{
+  border: solid 1px #CC0033;
+  border-width: 1px 1px 3px 1px;
+}
+
+.buttonnormal-blocked{
+  color: #999999;
+  background-color: #CCCCCC;
+  border: solid 1px #707070;
+  border-width: 1px 1px 3px 1px;
+}
