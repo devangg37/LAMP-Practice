@@ -1,17 +1,17 @@
 <template>
-  <button type="button" :class="[classes,wi]" @click="onClick" :style="style">{{ label }}</button>
+  <button ref="but" type="button" :class="[classes,w]" @click="onClick" :style="style">{{ label }}</button>
 </template>
 
 <script lang="ts">
-import './button.css';
+
 import { reactive, computed,ref } from 'vue';
 
 export default {
   name: 'my-button',
 
   props: {
-    w:{
-      type:Number,
+    wid:{
+      type:String,
     },
     label: {
       type: String,
@@ -36,9 +36,8 @@ export default {
 
   setup(props:any, { emit }:any) {
     props = reactive(props);
-    const wi = ref();
-    wi.value = `w-[${props.w}px]`
-    console.log(wi.value)
+   
+    
     return {
       
       classes: computed(() => ({

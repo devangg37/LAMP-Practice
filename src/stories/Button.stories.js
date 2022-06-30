@@ -33,7 +33,7 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   label: 'Button',
-  w:"200"
+  wid:"w-[200px]"
 };
 
 export const Secondary = Template.bind({});
