@@ -2,7 +2,7 @@
 
 import Checkbox from './CheckBox.vue';
 
-import { Meta } from '@storybook/vue3'; 
+import { Meta, StoryFn } from '@storybook/vue3'; 
 
 
 export default {
@@ -13,3 +13,15 @@ export default {
     title: 'CheckBox',
     component: Checkbox,
   } as Meta<typeof Checkbox>
+
+  const Template: StoryFn<typeof Checkbox> = (args) => ({
+    components: { Checkbox },
+    setup() {
+      return { args };
+    },
+    template: '<Checkbox v-bind="args" />',
+  });
+
+  //👇 Each story then reuses that template
+export const Primary = Template.bind({});
+Primary.args = { label: 'checkbox', labelsize: 'text-[23px]' , fieldId: 'check-1' };
